@@ -1,0 +1,42 @@
+
+📊 Priority Distribution in Sample:
+  LOW: 58,498 (58.5%)
+  MEDIUM: 34,712 (34.7%)
+  HIGH: 6,790 (6.8%)
+🤖 Training models on sample dataset (100,000 rows)...
+🔤 Creating TF-IDF vectors...
+📊 TF-IDF feature matrix shape: (80000, 10000)
+  Training Logistic Regression...
+    Accuracy: 0.821 (trained in 15.9s)
+  Training SGD Classifier...
+    Accuracy: 0.753 (trained in 0.8s)
+  Training Random Forest...
+    Note: Using sparse matrix for Random Forest due to size
+    Accuracy: 0.846 (trained in 56.9s)
+  Training Gradient Boosting...
+    Note: Using sparse matrix for Gradient Boosting due to size
+    Accuracy: 0.828 (trained in 381.6s)
+  Training Naive Bayes...
+    Accuracy: 0.760 (trained in 0.0s)
+
+🏆 Best Model: Random Forest (Accuracy: 0.846)
+
+📊 Detailed Evaluation - Random Forest:
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        HIGH       1.00      0.55      0.71      1358
+         LOW       0.83      0.97      0.90     11700
+      MEDIUM       0.86      0.70      0.77      6942
+
+    accuracy                           0.85     20000
+   macro avg       0.90      0.74      0.79     20000
+weighted avg       0.85      0.85      0.84     20000
+
+✅ Model saved as large_github_issue_classifier.pkl
+
+======================================================================
+🎉 Pipeline completed successfully!
+✅ Best model: Random Forest
+✅ Model saved for future use
